@@ -1,0 +1,68 @@
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER' : 'admin',
+        'PASSWORD' : 'admin',
+        'HOST': 'db',
+        'PORT' : 5432
+    }
+}
+
+
+
+CORS_ALLOWED_ORIGINS = [
+'http://front-end',
+'http://localhost:8080',
+'http://front-end:8080'
+]
+
+from django.db import models
+
+class Product(models.Model):
+    name = models.CharField(max_length=50)
+    description = models.CharField(max_length=255)
+    qty = models.IntegerField(default=0)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+
+    from rest_framework import serializers
+
+    from .models import Product
+    
+    class ProductSerializer(serializers.ModelSerializer):
+        class Meta:
+            model = Product
+            fields = ["id", "name", "description", "qty", "created_at"]
+
+
+
+from django.shortcuts import render
+
+from rest_framework import viewsets
+
+from .models import Product
+
+from .serializers import ProductSerializer
+
+
+class ProductViewSet(viewsets.ModelViewSet):
+    serializer_class = ProductSerializer
+    queryset = Product.objects.all()
+
+
+
+
+    from django.urls import path, include
+
+    from rest_framework.routers import DefaultRouter
+    
+    from .views import ProductViewSet
+    
+    router = DefaultRouter()
+    router.register("products", ProductViewSet, basename="products")
+    
+    urlpatterns = [
+        path("", include(router.urls)),
+    ]
+    
