@@ -1,0 +1,2 @@
+# chmod 644 /var/www/html/index.php
+# chmod 755 /var/www/html/
