@@ -97,48 +97,22 @@ $ sudo docker-compose --version
 ```
 
 
-## Installation sur Windows
+# Installation des images pour les tp
 
-### Installer Docker sur Windows 7/8/10 Home
+Vous deviez executer les commandes suivants
 
-Si vous avez Windows 7/8 ou 10 Home, vous devez installer Docker Toolbox.
-
-- Tout d’abord, rendez-vous sur le [référentiel officiel Docker Toolbox](https://github.com/docker-archive/toolbox/releases) sur Github et téléchargez le dernier exécutable disponible‎
-- Exécutez le programme d’installation de Docker Toolbox pour Windows.
-
-![](https://devconnected.com/wp-content/uploads/2019/08/step-1-toolbox.png)
-
-Cliquez sur next, next... puis install
-
-Après un court moment, votre installation devrait se terminer. Laissez la case cochée pour voir les raccourcis créés par Docker.
-
-- Exécuter le démarrage rapide de Docker pour Windows‎
-
-![](https://devconnected.com/wp-content/uploads/2019/08/shortcuts.png)
-
-Double-clique sur l’icône pour démarrer _**Docker Quickstart**_ .‎
-
-Un shell de terminal s’ouvre et commence à exécuter certaines commandes sur votre ordinateur pour configurer correctement Docker. Cette étape d’installation créera une machine virtuelle VirtualBox à l’aide de l’ISO Boot2Docker téléchargée
-
-![](https://devconnected.com/wp-content/uploads/2019/08/docker-quickstart-step-1.png)
-
-Attendez quelques instants que la configuration se termine.‎
-
-Après quelques instants, vous devriez voir Moby (la baleine de Docker!), ce qui signifie que votre installation a réussi
-
-![](https://devconnected.com/wp-content/uploads/2019/08/docker-toolbox-exe-2.png)
-
-Pour vérifier votre version actuelle de Docker, exécutez la commande suivante‎
 ```bash
-$ docker version
+$ sudo docker pull python:3
+$ sudo docker pull node:alpine
+$ sudo docker pull postgres
+$ sudo docker pull php:apache
 ```
 
-![](https://devconnected.com/wp-content/uploads/2019/08/docker-version-1.png)
+Apres avoir exectuter les commandes suivantes verifier si toutes les images sont installer
 
+```bash
+$ sudo docker images
+```
 
-### Installer Docker sur Windows 10 Pro / Entreprise
-
-- Vous deviez vérifiez vos paramètres de virtualisation
-- ‎Pour télécharger Docker Desktop, rendez-vous sur [cette page](https://docs.docker.com/desktop/windows/install/) et cliquez sur _**« Docker Desktop for Windows »**_.
 ## Source
 Pour plus d'informations vous pouvez consulter [`page officiel du docker`](https://docs.docker.com/get-docker/)
