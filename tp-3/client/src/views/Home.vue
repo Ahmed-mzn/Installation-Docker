@@ -28,7 +28,7 @@
                 <td>{{product.name}}</td>
                 <td>{{product.description}}</td>
                 <td>{{product.qty}}</td>
-                <td>{{product.created_at}}</td>
+                <td>{{product.get_created_at}}</td>
                 <td>
                   <div class="buttons">
                     <button @click="DeleteProduct(product.id)" class="button is-danger is-outlined">Delete</button>
