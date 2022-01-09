@@ -11,7 +11,7 @@ Désinstaller les anciennes versions.
 $ sudo apt-get remove docker docker-engine docker.io containerd runc
 ```
 
-Executer les commandes suivants respectivement l'une apres l'autre
+Executer les commandes suivantes respectivement l'une apres l'autre
 
 ```bash
 $ sudo apt-get update
@@ -57,7 +57,7 @@ $ sudo dnf remove docker \
                   docker-engine
 ```
 
-Executer les commandes suivants respectivement l'une apres l'autre
+Executer les commandes suivantes respectivement l'une apres l'autre
 ```bash
 $ sudo dnf -y install dnf-plugins-core
 $ sudo dnf config-manager \
@@ -71,7 +71,7 @@ Start docker
 $ sudo systemctl start docker
 ```
 
-Vérifier si docker est bien installer avec la commande suivant
+Vérifier si docker est bien installer avec la commande suivante
 ```bash
 $ sudo docker version
 ```
@@ -91,7 +91,7 @@ Appliquer des autorisations exécutables au fichier binaire
 $ sudo chmod +x /usr/local/bin/docker-compose
 ```
 
-Test the installation
+Tester l'installation
 ```bash
 $ sudo docker-compose --version
 ```
@@ -99,7 +99,7 @@ $ sudo docker-compose --version
 
 # Installation des images pour les tp
 
-Vous deviez executer les commandes suivants
+Vous devez executer les commandes suivantes
 
 ```bash
 $ sudo docker pull python:3
