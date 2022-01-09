@@ -108,7 +108,7 @@ $ sudo docker pull postgres
 $ sudo docker pull php:apache
 ```
 
-Apres avoir exectuter les commandes suivantes verifier si toutes les images sont installer
+Apres avoir executer les commandes suivantes verifier si toutes les images sont installer
 
 ```bash
 $ sudo docker images
